@@ -2,7 +2,7 @@ $ python3 -m venv schwab-mcp
 $ source schwab-mcp/bin/activate
 $ python -m pip install -U pip
 $ python -m pip install uv
-Install schwab-mcp.
+Install schwab-mcp:
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
 Install OpenCode to interact with schwab-mcp:
 $ curl -fsSL https://opencode.ai/install | bash
@@ -43,3 +43,6 @@ Show me the options chain for TSLA with Greeks
 NVIDIA NIM:
 Get API Key at https://build.nvidia.com/explore/discover
 Run the /connect command, select nvidia and paste your API Key
+
+Install PyTorch:
+$ uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
