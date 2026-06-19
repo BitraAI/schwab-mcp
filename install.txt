@@ -2,8 +2,9 @@ $ python3 -m venv schwab-mcp
 $ source schwab-mcp/bin/activate
 $ python -m pip install -U pip
 $ python -m pip install uv
+Install schwab-mcp.
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
-Install OpenCode:
+Install OpenCode to interact with schwab-mcp:
 $ curl -fsSL https://opencode.ai/install | bash
 Update PATH in .profile
   if [ -d "$HOME/.local/bin" ] ; then
@@ -18,7 +19,8 @@ Enter Callback URL(s)
 Wait for status to show - Ready for Use
 Authenticate with Schwab to generate a token file in VS Code - Remote SSH
 $ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
-This will open a browser window for you to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
+This will open a browser window to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
+Add MCP Server to OpenCode:
 $ opencode mcp add
 
 ┌  Add MCP server
