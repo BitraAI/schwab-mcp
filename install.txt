@@ -3,6 +3,7 @@ $ source schwab-mcp/bin/activate
 $ python -m pip install -U pip
 $ python -m pip install uv
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
+Install OpenCode:
 $ curl -fsSL https://opencode.ai/install | bash
 Update PATH in .profile
   if [ -d "$HOME/.local/bin" ] ; then
@@ -14,7 +15,7 @@ Create APP and Select an API Product
   Market Data Production
 Enter Callback URL(s)
   https://127.0.0.1:8182/
-Wait for status - Ready for Use
+Wait for status to show - Ready for Use
 Authenticate with Schwab to generate a token file in VS Code - Remote SSH
 $ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
 This will open a browser window for you to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
@@ -31,6 +32,12 @@ $ opencode mcp add
 ◆  Enter command to run
 │  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET█
 └
+Run OpenCode:
+$ cd schwab-mcp
 $ opencode
 Ask OpenCode to:
 Show me the options chain for TSLA with Greeks
+
+NVIDIA NIM:
+Get API Key at https://build.nvidia.com/explore/discover
+Run the /connect command, select nvidia and paste your API Key
