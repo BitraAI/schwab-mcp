@@ -1,0 +1,10 @@
+$ python3 -m venv schwab-mcp
+$ source schwab-mcp/bin/activate
+$ python -m pip install -U pip
+$ python -m pip install uv
+$ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
+$ curl -fsSL https://opencode.ai/install | bash
+Update PATH in .profile
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
+fi
