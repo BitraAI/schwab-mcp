@@ -5,6 +5,32 @@ $ python -m pip install uv
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
 $ curl -fsSL https://opencode.ai/install | bash
 Update PATH in .profile
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
-fi
+  if [ -d "$HOME/.local/bin" ] ; then
+      PATH="$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
+  fi
+Get Client ID and Client Secret from https://developer.schwab.com/
+Create APP and Select an API Product
+  Accounts and Trading Production
+  Market Data Production
+Enter Callback URL(s)
+  https://127.0.0.1:8182/
+Wait for status - Ready for Use
+Authenticate with Schwab to generate a token file in VS Code - Remote SSH
+$ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
+This will open a browser window for you to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
+$ opencode mcp add
+
+┌  Add MCP server
+│
+◇  Enter MCP server name
+│  schwab-mcp
+│
+◇  Select MCP server type
+│  Local
+│
+◆  Enter command to run
+│  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET█
+└
+$ opencode
+Ask OpenCode to:
+Show me the options chain for TSLA with Greeks
