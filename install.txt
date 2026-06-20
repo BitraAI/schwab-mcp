@@ -17,7 +17,10 @@ Create APP and Select an API Product
 Enter Callback URL(s)
   https://127.0.0.1:8182/
 Wait for status to show - Ready for Use
-Authenticate with Schwab to generate a token file in VS Code - Remote SSH
+
+In VS Code, Install Remote - SSH and Live Preview Extensions.
+
+Authenticate with Schwab to generate a token file.
 $ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
 This will open a browser window to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
 Add MCP Server to OpenCode:
