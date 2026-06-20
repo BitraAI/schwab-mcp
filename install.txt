@@ -4,7 +4,7 @@ $ python -m pip install -U pip
 $ python -m pip install uv
 Install schwab-mcp:
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
-Install OpenCode to interact with schwab-mcp:
+Install OpenCode to interact with schwab-mcp server:
 $ curl -fsSL https://opencode.ai/install | bash
 Update PATH in .profile
   if [ -d "$HOME/.local/bin" ] ; then
