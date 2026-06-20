@@ -32,7 +32,7 @@ $ opencode mcp add
 │  Local
 │
 ◆  Enter command to run
-│  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET█
+│  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET
 └
 Run OpenCode:
 $ cd schwab-mcp
