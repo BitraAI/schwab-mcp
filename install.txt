@@ -18,7 +18,7 @@ Enter Callback URL(s)
   https://127.0.0.1:8182/
 Wait for status to show - Ready for Use
 
-In VS Code, Install Remote - SSH and Live Preview Extensions.
+In VS Code, Install Remote - SSH, Live Preview and Python Extensions from microsoft.
 
 Authenticate with Schwab to generate a token file.
 $ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
