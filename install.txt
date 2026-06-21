@@ -6,10 +6,9 @@ Install schwab-mcp:
 $ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
 Install OpenCode to interact with schwab-mcp server:
 $ curl -fsSL https://opencode.ai/install | bash
-Update PATH in .profile
-  if [ -d "$HOME/.local/bin" ] ; then
-      PATH="$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
-  fi
+Append PATH in .profile
+PATH="$HOME/.opencode/bin:$PATH"
+
 Get Client ID and Client Secret from https://developer.schwab.com/
 Create APP and Select an API Product
   Accounts and Trading Production
