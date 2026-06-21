@@ -1,9 +1,10 @@
-$ python3 -m venv schwab-mcp
-$ source schwab-mcp/bin/activate
+In VS Code, Install Remote - SSH, Live Preview and Python Extensions from microsoft.
+Add New SSH Host...  
+Login to remote Ubuntu host.
+$ python3 -m venv opencode
+$ source opencode/bin/activate
 $ python -m pip install -U pip
 $ python -m pip install uv
-Install schwab-mcp:
-$ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
 Install OpenCode to interact with schwab-mcp server:
 $ curl -fsSL https://opencode.ai/install | bash
 Append PATH in .profile
@@ -17,7 +18,8 @@ Enter Callback URL(s)
   https://127.0.0.1:8182/
 Wait for status to show - Ready for Use
 
-In VS Code, Install Remote - SSH, Live Preview and Python Extensions from microsoft.
+Install schwab-mcp:
+$ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
 
 Authenticate with Schwab to generate a token file.
 $ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
@@ -37,7 +39,6 @@ $ opencode mcp add
 │  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET
 └
 Run OpenCode:
-$ cd schwab-mcp
 $ opencode
 Ask OpenCode to:
 Show me the options chain for TSLA with Greeks
