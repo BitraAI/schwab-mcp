@@ -19,10 +19,10 @@ Enter Callback URL(s)
 Wait for status to show - Ready for Use
 
 Install schwab-mcp:
-$ uv tool install git+https://github.com/jkoelker/schwab-mcp.git
+$ uv pip install git+https://github.com/jkoelker/schwab-mcp.git
 
 Authenticate with Schwab to generate a token file.
-$ schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
+$ uv run schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
 This will open a browser (Click on Open in Browser in VS Code) to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
 Add MCP Server to OpenCode:
 $ opencode mcp add
