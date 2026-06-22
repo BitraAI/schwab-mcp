@@ -1,14 +1,16 @@
 In VS Code, Install Remote - SSH, Live Preview and Python Extensions from microsoft.
 Add New SSH Host...  
 Login to remote Ubuntu host.
-$ python3 -m venv opencode
-$ source opencode/bin/activate
-$ python -m pip install -U pip
-$ python -m pip install uv
+
 Install OpenCode to interact with schwab-mcp server:
 $ curl -fsSL https://opencode.ai/install | bash
 Append PATH in .profile
 PATH="$HOME/.opencode/bin:$PATH"
+
+$ python3 -m venv schwab-mcp
+$ source schwab-mcp/bin/activate
+(schwab-mcp) $ python -m pip install -U pip
+(schwab-mcp) $ python -m pip install uv
 
 Get Client ID and Client Secret from https://developer.schwab.com/
 Create APP and Select an API Product
@@ -19,13 +21,13 @@ Enter Callback URL(s)
 Wait for status to show - Ready for Use
 
 Install schwab-mcp:
-$ uv pip install git+https://github.com/jkoelker/schwab-mcp.git
+(schwab-mcp) $ uv pip install git+https://github.com/jkoelker/schwab-mcp.git
 
 Authenticate with Schwab to generate a token file.
-$ uv run schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
+(schwab-mcp) $ uv run schwab-mcp auth --client-id YOUR_KEY --client-secret YOUR_SECRET --callback-url https://127.0.0.1:8182/
 This will open a browser (Click on Open in Browser in VS Code) to log in to Schwab. Once complete, a token will be saved to ~/.local/share/schwab-mcp/token.yaml.
 Add MCP Server to OpenCode:
-$ opencode mcp add
+(schwab-mcp) $ opencode mcp add
 
 ┌  Add MCP server
 │
@@ -39,7 +41,7 @@ $ opencode mcp add
 │  schwab-mcp server --client-id YOUR_KEY --client-secret YOUR_SECRET
 └
 Run OpenCode:
-$ opencode
+(schwab-mcp) $ opencode
 Ask OpenCode to:
 Show me the options chain for TSLA with Greeks
 
@@ -48,4 +50,4 @@ Get API Key at https://build.nvidia.com/explore/discover
 Run the /connect command, select nvidia and paste your API Key
 
 Install PyTorch:
-$ uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
+(schwab-mcp) $ uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu132
