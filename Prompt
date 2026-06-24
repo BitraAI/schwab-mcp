@@ -10,7 +10,7 @@ Determine the current underlying price.
 
 STEP 2
 Calculate the current ATM strike.
-Round(Spot / current zone strike spacing, 0) * current zone strike spacing
+ATM = Round(Spot / current zone strike spacing, 0) * current zone strike spacing
 
 STEP 3
 Retrieve every option strike between
