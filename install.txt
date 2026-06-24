@@ -1,4 +1,5 @@
-In VS Code, Install Remote - SSH, Live Preview and Python Extensions from microsoft.
+In VS Code, Install Remote - SSH, Remove Explorer, Live Preview and Python Extensions from microsoft.
+To communicate with Browser redirect URLs, Open VS Code Settings, Uncheck Remote.SSH: Use Exec Server
 Add New SSH Host...  
 Login to remote Ubuntu host.
 
@@ -16,6 +17,8 @@ Get Client ID and Client Secret from https://developer.schwab.com/
 Create APP and Select an API Product
   Accounts and Trading Production
   Market Data Production
+Order Limit
+  120
 Enter Callback URL(s)
   https://127.0.0.1:8182/
 Wait for status to show - Ready for Use
@@ -43,6 +46,8 @@ Add MCP Server to OpenCode:
 └
 Run OpenCode:
 (schwab-mcp) $ opencode
+Enter /models
+Select DeepSeek V4 Flash Free
 Ask OpenCode to:
 Show me the options chain for TSLA with Greeks
 
